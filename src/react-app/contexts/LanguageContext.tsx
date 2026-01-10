@@ -81,6 +81,14 @@ const translations: Record<Language, Record<string, any>> = {
       title: "Our Day",
       subtitle: "A timeline of celebrations",
       events: {
+        Caftan: {
+          title: "Caftan Rental",
+          description: "Optional caftan rental the day before - more infos in FAQ",
+        },
+        Henna: {
+          title: "Henna Night",
+          description: "Ladies-only henna night with traditional dresses and music - more infos in FAQ",
+        },
         ceremony: {
           title: "Ceremony",
           description: "Celebrate our union with us in a beautiful garden setting",
@@ -147,6 +155,27 @@ const translations: Record<Language, Record<string, any>> = {
           question: "Can I take photos during the ceremony?",
           answer: "We kindly ask for an unplugged ceremony. Feel free to take photos during the reception!",
         },
+        {
+          question: "A Thoughtful Gesture ?",
+          answer: "Your presence at our celebration is the most precious gift we could hope for.\n" +
+              "Should you wish to honor us further, a contribution toward our future together would be received with heartfelt gratitude.\n" +
+              "If you prefer a symbolic gesture, something thoughtful or handcrafted would be truly treasured.",
+
+    },
+        {
+          question: "Caftan Rentals ?",
+          answer:
+              "Caftan rentals are entirely optional.\n" +
+              "For those interested in renting a Moroccan traditional dress (caftan), we can arrange a visit to caftan rental shops before the henna night to make things easier.\n" +
+              "Please let us know if you would like to join, or if you already plan to wear a traditional dress from your own country or cultural background.",
+        },
+        {
+          question: "Henna Night ?",
+          answer:
+              "The henna night is a traditional Moroccan celebration for ladies only.\n" +
+              "It will take place at the same venue and will feature a warm Moroccan atmosphere with traditional attire, music, and henna as part of the celebration.",
+        },
+
       ],
     },
     rsvp: {
@@ -214,6 +243,14 @@ const translations: Record<Language, Record<string, any>> = {
       title: "برنامج اليوم",
       subtitle: "جدول الاحتفالات",
       events: {
+        Caftan: {
+          title: "تأجير القفطان",
+          description: "تأجير القفطان اختياري في اليوم السابق – لمزيد من المعلومات يرجى الاطلاع على الأسئلة الشائعة",
+        },
+        Henna: {
+          title: "ليلة الحناء",
+          description: "ليلة حناء مخصصة للنساء فقط مع أزياء تقليدية وموسيقى — مزيد من المعلومات في قسم FAQ",
+        },
         ceremony: {
           title: "مراسم الزفاف",
           description: "استقبال الضيوف",
@@ -279,6 +316,26 @@ const translations: Record<Language, Record<string, any>> = {
           question: "هل يمكنني التقاط صور أثناء المراسم؟",
           answer: "نرجو عدم استخدام الهواتف أثناء المراسم. يمكنكم التقاط الصور خلال حفل الاستقبال!",
         },
+        {
+          question: "تعبيرًا عن محبتكم؟",
+          answer: "حضوركم حفل زفافنا هو أعظم هدية بالنسبة لنا.\n" +
+              "وإذا رغبتم في تقديم هدية، فسنكون ممتنين لمساهمة تدعم مستقبلنا معًا.\n" +
+              "وإذا فضلتم هدية رمزية، فإن شيئًا ذا معنى أو مصنوعًا يدويًا سيسعدنا كثيرًا.",
+        },
+        {
+          question: "تأجير القفطان؟",
+          answer:
+              "تأجير القفطان اختياري تمامًا.\n" +
+              "بالنسبة لمن ترغب في استئجار الزي المغربي التقليدي (القفطان)، يمكننا تنظيم زيارة لمحلات تأجير القفطان قبل ليلة الحناء لتسهيل الأمر.\n" +
+              "يرجى إبلاغنا إذا كنتِ ترغبين في الانضمام، أو إذا كنتِ تخططين لارتداء زي تقليدي من بلدك أو من ثقافتك الخاصة.",
+        },
+        {
+          question: "ليلة الحناء؟",
+          answer:
+              "ليلة الحناء هي احتفال مغربي تقليدي مخصص للسيدات فقط.\n" +
+              "ستُقام في نفس المكان، وستتميز بأجواء مغربية دافئة تشمل الأزياء التقليدية والموسيقى والحناء كجزء من الاحتفال.",
+        },
+
       ],
     },
     rsvp: {

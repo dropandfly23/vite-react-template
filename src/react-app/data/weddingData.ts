@@ -43,31 +43,48 @@ export const venueLocation = {
 
 export const timelineEvents = [
   {
-    time: "4:00 PM",
+    time: "September 21, 2026 - 10 AM - 4:00 PM",
+    title: "Caftan Rental",
+    description:
+        "Should you wish to rent a Moroccan traditional dress (caftan), we will be visiting caftan rental shops the day before. " +
+        "This is entirely optional, and you are also welcome to bring a traditional dress from your own country if you prefer.",
+    icon: "music",
+  },
+  {
+    time: "September 21, 2026 - 18:00 PM - 22:00 PM",
+    title: "Henna",
+    description:
+        "A ladies-only henna night, where guests will be dressed in traditional attire and enjoy music in a Moroccan atmosphere. " +
+        "If you already have a traditional dress from your country, please feel free to bring it.",
+    icon: "music",
+  },
+
+  {
+    time: "September 22, 2026 - 5:00 PM",
     title: "Ceremony",
     description: "Celebrate our union with us in a beautiful garden setting",
     icon: "heart",
   },
   {
-    time: "5:00 PM",
+    time: "September 22, 2026 - 6:00 PM",
     title: "Cocktail Hour",
     description: "Enjoy welcome drinks",
     icon: "wine",
   },
   {
-    time: "6:00 PM",
+    time: "September 22, 2026 - 8:00 PM",
     title: "Dinner",
     description: "Savor a delicious farm-to-table feast",
     icon: "utensils",
   },
   {
-    time: "8:00 PM",
+    time: "September 22, 2026 - 10:00 PM",
     title: "First Dance",
     description: "Our first dance as a married couple",
     icon: "music",
   },
   {
-    time: "8:30 PM",
+    time: "September 22, 2026 - 8:30 PM",
     title: "Party",
     description: "Party time...",
     icon: "sparkles",

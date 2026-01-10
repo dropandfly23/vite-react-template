@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ElementType> = {
   sparkles: Sparkles,
 };
 
-const eventKeys = ["ceremony", "cocktail", "dinner", "firstDance", "party"];
+const eventKeys = ["Caftan", "Henna", "ceremony", "cocktail", "dinner", "firstDance", "party"];
 
 export function TimelineSection() {
   const ref = useRef(null);
