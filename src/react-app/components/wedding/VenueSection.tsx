@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Navigation, ExternalLink } from "lucide-react";
+import { MapPin, Navigation, ExternalLink, Apple, Car } from "lucide-react";
 import { venueLocation } from "../../data/weddingData";
 import { useLanguage } from "../../contexts/LanguageContext";
+import qrCodeImage from "../../assets/qrcode.png";
 
 export function VenueSection() {
   const ref = useRef(null);
@@ -12,6 +13,12 @@ export function VenueSection() {
 
   // Simple embedded map using OpenStreetMap as fallback
   const osmMapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${venueLocation.lng - 0.01}%2C${venueLocation.lat - 0.01}%2C${venueLocation.lng + 0.01}%2C${venueLocation.lat + 0.01}&layer=mapnik&marker=${venueLocation.lat}%2C${venueLocation.lng}`;
+
+  // Navigation URLs
+  const { lat, lng, name } = venueLocation;
+  const googleMapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+  const appleMapsUrl = `http://maps.apple.com/?daddr=${lat},${lng}&q=${encodeURIComponent(name)}`;
+  const wazeUrl = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
 
   return (
     <section
@@ -67,22 +74,62 @@ export function VenueSection() {
 
               <div className={`flex flex-col sm:flex-row gap-4 ${isRTL ? "sm:flex-row-reverse" : ""}`}>
                 <a
-                  href={venueLocation.googleMapsUrl}
+                  href={googleMapsDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`btn-romantic flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                  className={`btn-romantic w-full sm:w-auto min-h-[44px] active:scale-95 transition flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
                 >
                   <Navigation className="w-4 h-4" aria-hidden="true" />
                   {t("venue.getDirections")}
                 </a>
+              </div>
+
+              <div className={`mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 ${isRTL ? "sm:[&>*]:flex-row-reverse" : ""}`}>
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueLocation.name)}`}
+                  href={venueLocation.googleMapsUrl || googleMapsDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`btn-outline-romantic flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                  className={`btn-outline-romantic w-full sm:w-auto min-h-[44px] active:scale-95 transition flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
                 >
                   <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                  {t("venue.openInMaps")}
+                  {t("venue.openInGoogleMaps")}
+                </a>
+                <a
+                  href={appleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-outline-romantic w-full sm:w-auto min-h-[44px] active:scale-95 transition flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                >
+                  <Apple className="w-4 h-4" aria-hidden="true" />
+                  {t("venue.openInAppleMaps")}
+                </a>
+                <a
+                  href={wazeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-outline-romantic w-full sm:w-auto min-h-[44px] active:scale-95 transition flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                >
+                  <Car className="w-4 h-4" aria-hidden="true" />
+                  {t("venue.openInWaze")}
+                </a>
+              </div>
+
+              <div className={`mt-6 ${isRTL ? "text-right" : "text-left"}`}>
+                <p className="text-sm text-muted-foreground mb-2">{t("venue.scanQR")}</p>
+                <a
+                  href={venueLocation.googleMapsUrl || googleMapsDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex flex-col items-center justify-center rounded-xl border border-primary/20 bg-background hover:bg-primary/5 active:scale-95 transition p-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+                  aria-label={t("venue.tapToOpenInGoogleMaps")}
+                >
+                  <img
+                    src={qrCodeImage}
+                    alt={`${venueLocation.name} - QR code to open address`}
+                    className="w-40 sm:w-48 md:w-56 h-auto rounded-md border border-border bg-background"
+                    loading="lazy"
+                  />
+                  <span className="mt-2 text-xs text-muted-foreground">{t("venue.tapToOpenInGoogleMaps")}</span>
                 </a>
               </div>
             </div>

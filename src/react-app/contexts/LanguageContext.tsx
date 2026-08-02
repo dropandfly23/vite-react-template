@@ -116,20 +116,30 @@ const translations: Record<Language, Record<string, any>> = {
       subtitle: "Where we'll celebrate",
       getDirections: "Get Directions",
       openInMaps: "Open in Maps",
-      description : "Resting along Morocco’s Atlantic coast, Oualidia is a hidden gem where a peaceful lagoon meets the open sea. Surrounded by natural beauty and infused with the soul of Moroccan coastal life, this serene haven offers a timeless setting to celebrate love, unity, and joy."
-
-    },
+      openInGoogleMaps: "Open in Google Maps",
+      openInAppleMaps: "Open in Apple Maps",
+      openInWaze: "Open in Waze",
+      scanQR: "Scan this QR code to open the venue address",
+      tapForDirections: "Tap for directions",
+      tapToOpenInGoogleMaps: "Tap to open in Google Maps",
+      description : "Resting along Morocco’s Atlantic coast, Oualidia is a hidden gem where a peaceful lagoon meets the open sea. Surrounded by natural beauty and infused with the soul of Moroccan coastal life, this serene haven offers a timeless setting to celebrate love, unity, and joy. Our family home, where we will celebrate our wedding, makes this occasion all the more meaningful, allowing us to share a place so close to our hearts with the people we love."
+ 
+     },
     faq: {
       title: "Questions & Answers",
       subtitle: "Everything you need to know",
       items: [
         {
           question: "What time should guests arrive?",
-          answer: "We kindly ask that all guests arrive by 3:45 PM to be seated before the ceremony begins at 4:00 PM.",
+          answer: "We kindly ask that all guests arrive by 5:45 PM to be seated before the ceremony begins at 6:15 PM.",
         },
         {
           question: "Is there parking available?",
           answer: "Yes! Parking will be available at the venue.",
+        },
+        {
+          question: "Do I need a car to get to the venue?",
+          answer: "Yes — a car is necessary to reach the location. Please use the navigation links in the Venue section (Google Maps, Apple Maps, or Waze).",
         },
         {
           question: "Can I bring a plus one?",
@@ -278,6 +288,12 @@ const translations: Record<Language, Record<string, any>> = {
       subtitle: "حيث سنحتفل",
       getDirections: "احصل على الاتجاهات",
       openInMaps: "افتح في الخرائط",
+      openInGoogleMaps: "افتح في خرائط جوجل",
+      openInAppleMaps: "افتح في خرائط آبل",
+      openInWaze: "افتح في ويز",
+      scanQR: "امسح رمز الاستجابة السريعة لفتح العنوان",
+      tapForDirections: "اضغط لعرض الاتجاهات",
+      tapToOpenInGoogleMaps: "اضغط لفتح الموقع في خرائط جوجل",
       description : "على ضفاف الساحل الأطلسي للمغرب، تتجلى الوليدية كجوهرة مخفية، حيث تعانق البحيرة الهادئة زرقة المحيط. وبين أحضان الطبيعة وروح الساحل المغربي الأصيل، تنسج هذه الواحة الهادئة أجواءً خالدة للاحتفال بالحب والانسجام والفرح."
     },
     faq: {
@@ -291,6 +307,10 @@ const translations: Record<Language, Record<string, any>> = {
         {
           question: "هل يتوفر موقف سيارات؟",
           answer: "نعم! ستتوفر خدمة صف السيارات المجانية في المكان.",
+        },
+        {
+          question: "هل أحتاج إلى سيارة للوصول إلى المكان؟",
+          answer: "نعم — من الضروري استخدام سيارة للوصول إلى الموقع. يرجى استخدام روابط الملاحة في قسم المكان (خرائط جوجل، خرائط آبل، أو ويز). يمكن ترتيب مشاركة السيارة بين الضيوف.",
         },
         {
           question: "هل يمكنني إحضار مرافق؟",

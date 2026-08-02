@@ -84,7 +84,34 @@ export function DetailsSection() {
               <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                 <MapPin className="w-5 h-5 mt-0.5 text-primary" aria-hidden="true" />
                 <div>
-                  <p className="font-medium text-foreground">{weddingDetails.ceremony.venue}</p>
+                  <p className="font-medium text-foreground">
+                    {/* Mobile: tappable pill button */}
+                    <a
+                      href="#venue"
+                      aria-label="View location and navigation options"
+                      className="md:hidden inline-flex items-center gap-2 rounded-full px-3 py-2 min-h-[44px] border border-primary/20 bg-primary/10 text-primary active:scale-95 transition focus:outline-none focus:ring-2 focus:ring-primary/30"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#venue')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      <span aria-hidden="true">📍</span>
+                      <span className="font-medium">{weddingDetails.ceremony.venue}</span>
+                    </a>
+                    {/* Desktop: keep link style */}
+                    <a
+                      href="#venue"
+                      aria-label="View location and navigation options"
+                      className="hidden md:inline underline decoration-dotted hover:decoration-solid hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 rounded"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#venue')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      {weddingDetails.ceremony.venue}
+                    </a>
+                    <span className="block md:hidden text-xs text-muted-foreground mt-1">{t('venue.tapForDirections')}</span>
+                  </p>
                   <p className="text-sm">{weddingDetails.ceremony.address}</p>
                 </div>
               </div>
@@ -115,7 +142,34 @@ export function DetailsSection() {
               <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                 <MapPin className="w-5 h-5 mt-0.5 text-accent" aria-hidden="true" />
                 <div>
-                  <p className="font-medium text-foreground">{weddingDetails.reception.venue}</p>
+                  <p className="font-medium text-foreground">
+                    {/* Mobile: tappable pill button */}
+                    <a
+                      href="#venue"
+                      aria-label="View location and navigation options"
+                      className="md:hidden inline-flex items-center gap-2 rounded-full px-3 py-2 min-h-[44px] border border-accent/20 bg-accent/10 text-accent active:scale-95 transition focus:outline-none focus:ring-2 focus:ring-accent/30"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#venue')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      <span aria-hidden="true">📍</span>
+                      <span className="font-medium">{weddingDetails.reception.venue}</span>
+                    </a>
+                    {/* Desktop: keep link style */}
+                    <a
+                      href="#venue"
+                      aria-label="View location and navigation options"
+                      className="hidden md:inline underline decoration-dotted hover:decoration-solid hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/30 rounded"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#venue')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      {weddingDetails.reception.venue}
+                    </a>
+                    <span className="block md:hidden text-xs text-muted-foreground mt-1">{t('venue.tapForDirections')}</span>
+                  </p>
                   <p className="text-sm">{weddingDetails.reception.address}</p>
                 </div>
               </div>

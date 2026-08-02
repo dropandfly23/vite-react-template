@@ -7,7 +7,7 @@ export const coupleInfo = {
   partner1: "Anouk",
   partner2: "Nidal",
   hashtag: "#AnoukAndNidal",
-  story: "Our love story began in France...",
+  story: "Our love story began in the Wallis(VS)...",
 };
 
 export const weddingDate = new Date("2026-09-22T16:00:00");
@@ -16,29 +16,28 @@ export const weddingDetails = {
   ceremony: {
     title: "The Ceremony",
     date: "September 22, 2026",
-    time: "4:00 PM",
-    venue: "Centre Commune Oulad Ghanem",
-    address: "Exact location will be sent to your phone later on.",
+    time: "6:00 PM",
+    venue: "Location : Our Family House - Near Oualidia",
+    address: "Exact location is updated in the navigation section. (for Waze, Google Maps, Apple Maps, etc.)",
     description: "Join us in a celebration with friends and family.",
   },
   reception: {
     title: "The Reception",
     date: "September 22, 2026",
     time: "6:00 PM",
-    venue: "Centre Commune Oulad Ghanem",
-    address: "Exact location will be sent to your phone later on.",
+    venue: "Location : Our Family House - Near Oualidia",
+    address: "Exact location is updated in the navigation section. (for Waze, Google Maps, Apple Maps, etc.)",
     description: "Celebrate with us over dinner, drinks, and dancing under the stars.",
   },
   dressCode: "Formal Attire",
   dressCodeDescription: "We kindly request formal attire or traditional clothes.",
 };
-
 export const venueLocation = {
-  lat: 32.8749287144863,
-  lng: -8.857845076151674,
-  name: "Centre Commune Oulad Ghanem",
-  address: "Exact location will be sent to your phone later on.",
-  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Centre%20Commune%20Oulad%20Ghanem",
+  lat: 32.88942806277203,
+  lng: -8.835232858151052,
+  name: "Wedding Venue",
+  address: "Douar Azizat, Oulad Ghanem, Morocco",
+  googleMapsUrl: "https://maps.app.goo.gl/WPkicMpTqaxdTqJM7",
 };
 
 export const timelineEvents = [
@@ -94,7 +93,7 @@ export const timelineEvents = [
 export const faqItems = [
   {
     question: "What time should guests arrive?",
-    answer: "We kindly ask that all guests arrive by 3:45 PM to be seated before the ceremony begins at 4:00 PM. This will give you time to find your seat and settle in.",
+    answer: "We kindly ask that all guests arrive by 5:45 PM to be seated before the ceremony begins at 6:15 PM. This will give you time to find your seat and settle in.",
   },
   {
     question: "Is there parking available?",

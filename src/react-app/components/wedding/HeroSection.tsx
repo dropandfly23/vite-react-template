@@ -90,7 +90,33 @@ export function HeroSection() {
             {weddingDetails.ceremony.date}
           </p>
           <p className="text-sm md:text-base text-muted-foreground">
-            {weddingDetails.ceremony.venue}
+            {/* Mobile: make it look like a tappable pill button */}
+            <a
+              href="#venue"
+              aria-label="View location and navigation options"
+              className="md:hidden inline-flex items-center gap-2 rounded-full px-3 py-2 min-h-[44px] border border-primary/20 bg-primary/10 text-primary active:scale-95 transition focus:outline-none focus:ring-2 focus:ring-primary/30"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#venue')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              {/* icon via emoji to avoid extra import weight on hero */}
+              <span aria-hidden="true">📍</span>
+              <span className="font-medium">{weddingDetails.ceremony.venue}</span>
+            </a>
+            {/* Desktop: keep subtle text link */}
+            <a
+              href="#venue"
+              aria-label="View location and navigation options"
+              className="hidden md:inline underline decoration-dotted hover:decoration-solid hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 rounded"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#venue')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              {weddingDetails.ceremony.venue}
+            </a>
+            <span className="block md:hidden text-xs text-muted-foreground mt-1">{t('venue.tapForDirections')}</span>
           </p>
         </motion.div>
 
